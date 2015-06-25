@@ -15,7 +15,27 @@ var Popups = React.createClass({
 , handleClickOutside: function(e) {
     this.setState({ popups: [] })
   }
+, handleClickInside: function(e){
+    var t = e.target
+    while (t) {
+      if (t.dataset && t.dataset.popupkey){
+        var popupkey = t.dataset.popupkey
+        var popups = this.state.popups
+        var ind = -1
+        popups.map(function(x, i){
+          //TODO get popupkey instead of key
+          if (x.key == popupkey)
+            ind = i
+        })
+        this.setState({popups: popups.slice(0, ind +1)})
+        return
+      }
+      t = t.parentNode
+    }
+  }
 , spawnLinkedDiv: function (e) {
+    this.handleClickInside(e)
+
     var data = e.target
     var arr = this.props.data.split('.')
     while(arr.length) {
@@ -28,7 +48,9 @@ var Popups = React.createClass({
     , left: e.pageX
     , top: e.pageY
     }
-    popups.push (<div key={Math.random()} style={s}><this.props.handler data={data}/></div>)
+    var id = Math.random()
+    popups.push (<div data-popupkey={id} key={id} style={s}>
+                  <this.props.handler data={data}/></div>)
     this.setState({popups: popups})
   }
 , render: function() {
