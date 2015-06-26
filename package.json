@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:.git"
+    "url": "git@github.com:Radivarig/react-popups.git"
   },
   "devDependencies": {
     "jsx-loader": "^0.13.2",
