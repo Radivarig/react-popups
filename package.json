@@ -1,28 +1,22 @@
 {
-  "name": "template",
-  "version": "0.0.1",
-  "description": "webpack-dev-server-react-router-flummox-template",
-  "main": "./src/entry.js",
-  "scripts": {
-    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --progress --colors --port 9999",
-    "watch": "./node_modules/webpack/bin/webpack.js --config webpack.config.js --progress --colors --watch"
-  },
+  "name": "react-popups",
+  "version": "1.0.0",
+  "description": "Reactjs component for custom popups on mouse click.",
   "author": "Reslav Hollos",
+  "main": "./exports.js",
+  "scripts": {
+    "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --progress --colors"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:.git"
+  },
   "devDependencies": {
-    "autoprefixer-core": "^5.2.0",
-    "babel-core": "^5.2.17",
-    "babel-loader": "^5.0.0",
-    "babel-runtime": "^5.2.17",
-    "css-loader": "^0.9.1",
-    "flummox": "^3.5.2",
-    "postcss-loader": "^0.4.4",
-    "react": "^0.13.3",
-    "react-router": "^0.13.3",
-    "style-loader": "^0.8.3",
-    "webpack": "^1.8.11",
-    "webpack-dev-server": "^1.8.2"
+    "jsx-loader": "^0.13.2",
+    "webpack-dev-server": "^1.9.0"
   },
   "dependencies": {
+    "react": "^0.13.3",
     "react-onclickoutside": "^0.2.4"
   }
 }

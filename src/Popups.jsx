@@ -7,6 +7,7 @@ var Popups = React.createClass({
     return { popups: [] }
   }
 , componentDidMount: function () {
+    //TODO receive event name in props
     document.addEventListener('click', this.spawnLinkedDiv)
   }
 , componentWillUnmount: function () {
