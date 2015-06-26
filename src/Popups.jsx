@@ -7,11 +7,10 @@ var Popups = React.createClass({
     return { popups: [] }
   }
 , componentDidMount: function () {
-    //TODO receive event name in props
-    document.addEventListener('click', this.spawnLinkedDiv)
+    document.addEventListener(this.props.event, this.spawnLinkedDiv)
   }
 , componentWillUnmount: function () {
-    document.removeEventListener('click', this.spawnLinkedDiv)
+    document.removeEventListener(this.props.event, this.spawnLinkedDiv)
   }
 , handleClickOutside: function(e) {
     this.setState({ popups: [] })
@@ -43,6 +42,8 @@ var Popups = React.createClass({
       data = data[arr.shift()]
       if ( !data ) return
     }
+    e.preventDefault()
+
     var popups = this.state.popups
 
     var half_w = 0.5*window.innerWidth

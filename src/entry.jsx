@@ -77,7 +77,7 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
-        <Popups handler={Popup} data={'attributes.data'}/>
+        <Popups handler={Popup} data={'attributes.data'} event='click'/>
         <Universe/>
       </div>
     )
