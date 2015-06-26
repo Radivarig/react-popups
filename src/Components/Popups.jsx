@@ -43,10 +43,22 @@ var Popups = React.createClass({
       if ( !data ) return
     }
     var popups = this.state.popups
+
+    var half_w = 0.5*window.innerWidth
+    var half_h = 0.5*window.innerHeight
+    var x = e.pageX
+    var y = e.pageY
+
+    var translateXY = '(-100%, 0%)'
+         if (x < half_w && y < half_h) translateXY = '(0%, 0%)'
+    else if (x < half_w && y > half_h) translateXY = '(0%, -100%)'
+    else if (x > half_w && y > half_h) translateXY = '(-100%, -100%)'
+
     var s = {
       position: 'fixed'
     , left: e.pageX
     , top: e.pageY
+    , transform: 'translate' +translateXY
     }
     var id = Math.random()
     popups.push (<div data-popupkey={id} key={id} style={s}>
