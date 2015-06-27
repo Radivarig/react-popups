@@ -1,12 +1,12 @@
-#react-popups
+# react-popups
 
 ![](http://i.imgur.com/VuwWFn2.gif)
 
-###Install
+### Install
 
 `npm install react-popups`
 
-###Demo
+### Demo
 
 Read the [example code](https://github.com/Radivarig/react-popups/blob/master/src/entry.jsx), or run it
 ```bash
@@ -16,14 +16,14 @@ npm run dev
 ```
 navigate to `localhost:8080`
 
-###Features
+### Features
 
 - create custom popup components on event ('click', 'contextMenu', ..)
 - pass data to them
 - detect screen quadrant (safe to click near edges)
 - close all front popups on click
 
-###Basic Usage
+### Basic Usage
 
 ```javascript
 // ...
@@ -56,6 +56,6 @@ var App = React.createClass({
 React.render(<App/>, document.body)
 ```
 
-###License
+### License
 
 MIT
