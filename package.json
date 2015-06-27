@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Reactjs component for custom popups on mouse click.",
   "author": "Reslav Hollos",
+  "license" : "MIT",
   "main": "./exports.js",
   "scripts": {
     "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --progress --colors"
