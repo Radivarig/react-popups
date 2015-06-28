@@ -1,6 +1,6 @@
 {
   "name": "react-popups",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Reactjs component for custom popups on mouse click.",
   "author": "Reslav Hollos",
   "license" : "MIT",
