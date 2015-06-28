@@ -1,1 +1,1 @@
-module.exports = require('./src/Popups.jsx')
+module.exports = require('jsx-loader!./src/Popups.jsx')
