@@ -73,7 +73,7 @@ var Popups = React.createClass({
     var id = Math.random()
     popups.push (
       <div data-popupkey={id} key={id} style={s}>
-        <this.props.handler data={data}/>
+        <this.props.handler data={data.nodeValue}/>
       </div>
     )
     this.setState({popups: popups})
