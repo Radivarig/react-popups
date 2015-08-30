@@ -7,10 +7,12 @@ var Popups = React.createClass({
     return { popups: [] }
   }
 , componentDidMount: function () {
-    document.addEventListener(this.props.event, this.spawnLinkedDiv)
+    if (this.props.clickButtons) document.addEventListener('click', this.spawnLinkedDiv)
+    if (this.props.event) document.addEventListener(this.props.event, this.spawnLinkedDiv)
   }
 , componentWillUnmount: function () {
-    document.removeEventListener(this.props.event, this.spawnLinkedDiv)
+    if (this.props.clickButtons) document.removeEventListener('click', this.spawnLinkedDiv)
+    if (this.props.event) document.removeEventListener(this.props.event, this.spawnLinkedDiv)
   }
 , handleClickOutside: function(e) {
     this.setState({ popups: [] })
@@ -42,7 +44,13 @@ var Popups = React.createClass({
       data = data[arr.shift()]
       if ( !data ) return
     }
-    e.preventDefault()
+
+    if(this.props.clickButtons) {
+      if (this.props.clickButtons.indexOf(e.button) > -1)
+        e.preventDefault()
+      else return
+    }
+    else e.preventDefault()
 
     var popups = this.state.popups
 
@@ -63,8 +71,11 @@ var Popups = React.createClass({
     , transform: 'translate' +translateXY
     }
     var id = Math.random()
-    popups.push (<div data-popupkey={id} key={id} style={s}>
-                  <this.props.handler data={data}/></div>)
+    popups.push (
+      <div data-popupkey={id} key={id} style={s}>
+        <this.props.handler data={data}/>
+      </div>
+    )
     this.setState({popups: popups})
   }
 , render: function() {
