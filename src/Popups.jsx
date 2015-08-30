@@ -38,12 +38,8 @@ var Popups = React.createClass({
 , spawnLinkedDiv: function (e) {
     this.handleClickInside(e)
 
-    var data = e.target
-    var arr = this.props.data.split('.')
-    while(arr.length) {
-      data = data[arr.shift()]
-      if ( !data ) return
-    }
+    var data = e.target.attributes[this.props.dataName || 'data']
+    if ( !data ) return
 
     if(this.props.clickButtons) {
       if (this.props.clickButtons.indexOf(e.button) > -1)
