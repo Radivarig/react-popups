@@ -10,9 +10,8 @@ var Popup = React.createClass({
     , borderStyle: 'solid'
     , borderColor: '#567'
     }
-    var data = this.props.data || ''
-    var ToDisplay = <DefaultPopup info={data.nodeValue}/>
-    if (data.nodeValue === 'universe') {ToDisplay = <Universe/>}
+    var ToDisplay = <DefaultPopup info={this.props.data}/>
+    if (this.props.data === 'universe') {ToDisplay = <Universe/>}
 
     return (
       <div style={popup_style}>
@@ -77,7 +76,7 @@ var App = React.createClass({
   render: function() {
     return (
       <div>
-        <Popups handler={Popup} data={'attributes.data'} event='click'/>
+        <Popups handler={Popup} clickButtons={[0]} />
         <Universe/>
       </div>
     )
