@@ -36,6 +36,7 @@ var PopupHandler = React.createClass({
     switch(this.props.data) {
       case 'clicked element identifier': Popup = <SomePopup/>; break
       // ...
+      // var something = this.props.popupProps.something
     }
   }
   return ({Popup})
@@ -51,6 +52,7 @@ var App = React.createClass({
                 dataName='data-yourdata'  // defaults to 'data'
                 />
                 //event='someOtherEvent'
+                //popupProps={something: ..}  // will be passed to PopupHandler
 
         Some <a data-yourdata={'clicked element identifier'} href={linkIfNoMatch}>demo</a> text.
       </div>
