@@ -1,6 +1,6 @@
 {
   "name": "react-popups",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Reactjs component for spawning custom popups at mouse position.",
   "author": "Reslav Hollos",
   "license" : "MIT",
