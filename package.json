@@ -16,7 +16,7 @@
     "webpack-dev-server": "^1.9.0"
   },
   "keywords": [
-    "react", "reactjs", "popup", "popups", "spawn", "mouse"
+    "react", "reactjs", "react-component", "popup", "popups", "spawn", "mouse"
   ],
   "dependencies": {
     "jsx-loader": "^0.13.x",
