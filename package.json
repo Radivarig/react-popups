@@ -3,7 +3,7 @@
   "version": "1.1.1",
   "description": "Reactjs component for spawning custom popups at mouse position.",
   "author": "Reslav Hollos",
-  "license" : "MIT",
+  "license": "MIT",
   "main": "./exports.js",
   "scripts": {
     "dev": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js --config webpack.config.js --progress --colors"
@@ -13,14 +13,21 @@
     "url": "git@github.com:Radivarig/react-popups.git"
   },
   "devDependencies": {
+    "react-dom": "^0.14.1",
     "webpack-dev-server": "^1.9.0"
   },
   "keywords": [
-    "react", "reactjs", "react-component", "popup", "popups", "spawn", "mouse"
+    "react",
+    "reactjs",
+    "react-component",
+    "popup",
+    "popups",
+    "spawn",
+    "mouse"
   ],
   "dependencies": {
     "jsx-loader": "^0.13.x",
-    "react": "^0.13.x",
-    "react-onclickoutside": "^0.3.1"
+    "react": "^0.14.1",
+    "react-onclickoutside": "^4.0.1"
   }
 }

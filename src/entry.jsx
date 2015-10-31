@@ -1,4 +1,5 @@
 var React = require('react')
+var render = require('react-dom').render
 var Popups = require('./Popups.jsx')
 
 var Popup = React.createClass({
@@ -83,4 +84,5 @@ var App = React.createClass({
   }
 })
 
-React.render(<App/>, document.getElementById('app'))
+
+render(<App/>, document.getElementById('app'))
