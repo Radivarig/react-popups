@@ -1,4 +1,5 @@
 var React = require('react')
+var render = require('react-dom').render
 var PopupsViewer = require('./PopupsViewer.jsx')
 
-React.render(<PopupsViewer/>, document.getElementById('app'))
+render(<PopupsViewer/>, document.getElementById('app'))
