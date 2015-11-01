@@ -1,14 +1,18 @@
 # react-popups
 
+Try it - [Live Example](https://radivarig.github.io/#/react-popups)
+
 ![](http://i.imgur.com/VuwWFn2.gif)
 
 ### Install
 
-`npm install react-popups`
+`npm install react-popups` (peer dependencies: `react react-dom`)
+
+for React **v0.13.3** `npm install react-popups@1.1.1`
 
 ### Demo
 
-Read the [example code](https://github.com/Radivarig/react-popups/blob/master/src/entry.jsx), or run it
+Check out [Live Example](https://radivarig.github.io/#/react-popups) and the [example code](https://github.com/Radivarig/react-popups/blob/master/src/entry.jsx), or run locally
 ```bash
 git clone git@github.com:Radivarig/react-popups.git
 npm install
@@ -60,7 +64,7 @@ var App = React.createClass({
   }
 })
 
-React.render(<App/>, document.body)
+require('react-dom').render(<App/>, document.body)
 ```
 
 ### License
