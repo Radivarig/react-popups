@@ -12,7 +12,7 @@ for React **v0.13.3** `npm install react-popups@1.1.1`
 
 ### Demo
 
-Check out [Live Example](https://radivarig.github.io/#/react-popups) and the [example code](https://github.com/Radivarig/react-popups/blob/master/src/entry.jsx), or run locally
+Check out [Live Example](https://radivarig.github.io/#/react-popups) and the [example code](https://github.com/Radivarig/react-popups/blob/master/src/PopupsViewer.jsx), or run locally
 ```bash
 git clone git@github.com:Radivarig/react-popups.git
 npm install
