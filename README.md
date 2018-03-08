@@ -6,9 +6,7 @@ Try it - [Live Example](https://radivarig.github.io/#/react-popups)
 
 ### Install
 
-`npm install react-popups` (peer dependencies: `react react-dom`)
-
-for React **v0.13.3** `npm install react-popups@1.1.1`
+`npm install --save react-popups`
 
 ### Demo
 
@@ -16,9 +14,9 @@ Check out [Live Example](https://radivarig.github.io/#/react-popups) and the [ex
 ```bash
 git clone git@github.com:Radivarig/react-popups.git
 npm install
-npm run dev 
+npm run build
+npm run start
 ```
-navigate to `localhost:8080`
 
 ### Features
 

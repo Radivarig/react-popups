@@ -1,23 +1,24 @@
-var React = require('react')
-var OnClickOutside = require('react-onclickoutside')
+import React from 'react'
+import onClickOutside from 'react-onclickoutside'
 
-var Popups = React.createClass({
-  mixins: [ OnClickOutside ]
-, getInitialState: function () {
-    return { popups: [] }
-  }
-, componentDidMount: function () {
+class Popups extends React.Component {
+  state = { popups: [] }
+
+  componentDidMount = () => {
     if (this.props.clickButtons) document.addEventListener('click', this.spawnLinkedDiv)
     if (this.props.event) document.addEventListener(this.props.event, this.spawnLinkedDiv)
   }
-, componentWillUnmount: function () {
+
+  componentWillUnmount = () => {
     if (this.props.clickButtons) document.removeEventListener('click', this.spawnLinkedDiv)
     if (this.props.event) document.removeEventListener(this.props.event, this.spawnLinkedDiv)
   }
-, handleClickOutside: function(e) {
+
+  handleClickOutside = (e) => {
     this.setState({ popups: [] })
   }
-, handleClickInside: function(e){
+
+  handleClickInside = (e) => {
     var t = e.target
     while (t) {
       if (t.dataset && t.dataset.popupkey){
@@ -35,7 +36,8 @@ var Popups = React.createClass({
       t = t.parentNode
     }
   }
-, spawnLinkedDiv: function (e) {
+
+  spawnLinkedDiv = (e) => {
     this.handleClickInside(e)
 
     var data = e.target.attributes[this.props.dataName || 'data']
@@ -74,11 +76,12 @@ var Popups = React.createClass({
                             />
       </div>
     )
-    this.setState({popups: popups})
+    this.setState({popups})
   }
-, render: function() {
+
+  render = () => {
     return (<div>{this.state.popups}</div>)
   }
-})
+}
 
-module.exports = Popups
+export default onClickOutside(Popups)
